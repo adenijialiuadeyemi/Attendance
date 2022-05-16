@@ -14,9 +14,9 @@
 		$success = $crud->insertAttendees($firstname,$lastname,$dob,$specialty,$email,$phone);
 		
 		if ($success){
-			echo "<h1 class='text-center text-success'>Record inserted successfully...</h1>";
+			require_once 'includes/success_msg.php'
 		}else{
-			echo "<h1 class='text-center text-danger'>Record NOT inserted successfully...</h1>";
+			require_once 'includes/error_msg.php'
 		}
 	}
 	if (isset($_POST['save'])){
@@ -31,9 +31,9 @@
 		$success = $crud->editAttendee($id, $firstname,$lastname,$dob,$specialty,$email,$phone);
 		
 		if ($success){
-			echo "<h1 class='text-center text-success'>Record Updated successfully...</h1>";
+			require_once 'includes/success_msg.php'
 		}else{
-			echo "<h1 class='text-center text-danger'>Record NOT Updated successfully...</h1>";
+			require_once 'includes/error_msg.php'
 		}
 	}
 ?>
